@@ -1,0 +1,17 @@
+ from machine import Pin
+import time
+
+# Set up the pins as outputs
+for i in range(1, 13):
+  pin = Pin(i, Pin.OUT)
+
+# Loop forever
+while True:
+  # Cycle through the pins 1 through 12
+  for i in range(1, 13):
+    # Set the current pin high
+    pin.on()
+    # Delay for five minutes (300,000 milliseconds)
+    time.sleep(300000)
+    # Set the current pin low
+    pin.off()
